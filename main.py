@@ -5,7 +5,7 @@ def resta(a, b):
     return a - b 
 
 print("----------CALCULADORA----------")
-print("Seleccione lo que deseas hacer:\n1-Suma\n")
+print("Seleccione lo que deseas hacer:\n1-Suma\n2-resta")
 
 numero = int(input("Ingresa un numero: "))
 
