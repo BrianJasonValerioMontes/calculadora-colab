@@ -2,25 +2,64 @@ def suma(a, b):
     return a + b
 
 def resta(a, b):
-    return a - b 
+    return a - b
 
-print("----------CALCULADORA----------")
-print("Seleccione lo que deseas hacer:\n1-Suma\n2-resta")
+def multiplicacion(a, b):
+    return a * b
 
-numero = int(input("Ingresa un numero: "))
+def division(a, b):
+    return a / b
 
-if numero == 1:
-    a = int(input("Ingresa el primer numero: "))
-    b = int(input("Ingresa el segundo numero: "))
-    
-    resultado = suma(a, b)
-    print("La suma es:", resultado)
+while True:
+    print("\n----------CALCULADORA----------")
+    print("Seleccione lo que deseas hacer:\n1-Suma\n2-Resta\n3-Multiplicación\n4-División\n5-Salir")
 
-elif numero == 2:
-    a = int(input("ingresa el primer numero: "))
-    b = int(input("ingresa el segund numero: "))
-    resultado = resta(a,b)
-    print("la esta es:", resultado)
+    try:
+        numero = int(input("Ingresa un numero: "))
 
-else: 
-    print("opcion no valida.")
+        if numero == 1:
+            a = int(input("Ingresa el primer numero: "))
+            b = int(input("Ingresa el segundo numero: "))
+
+            resultado = suma(a,b)
+            print("El resultado de la suma es:", resultado)
+            input("Presiona Enter para volver al menú...")
+
+        elif numero == 2:
+            a = int(input("Ingresa el primer numero: "))
+            b = int(input("Ingresa el segundo numero: "))
+
+            resultado = resta(a,b)
+            print("El resultado de la resta es:", resultado)
+            input("Presiona Enter para volver al menú...")
+
+        elif numero == 3:
+            a = int(input("Ingresa el primer numero: "))
+            b = int(input("Ingresa el segundo numero: "))
+
+            resultado = multiplicacion(a,b)
+            print("El resultado de la multiplicación es:", resultado)
+            input("Presiona Enter para volver al menú...")
+
+        elif numero == 4:
+            a = int(input("Ingresa el primer numero: "))
+            b = int(input("Ingresa el segundo numero: "))
+            if b == 0:
+                print("¡Error! No se puede dividir por cero.")
+            else:
+                resultado = division(a,b)
+                print("El resultado de la división es:", resultado)
+            input("Presiona Enter para volver al menú...")
+
+        elif numero == 5:
+            print("Saliendo de la calculadora. ¡Hasta luego!")
+            break
+
+        else:
+            print("Opción no válida.")
+            input("Presiona Enter para volver al menú...")
+
+    except ValueError:
+        print("¡Error! Ingresa un número entero.")
+        input("Presiona Enter para volver al menú...")
+
