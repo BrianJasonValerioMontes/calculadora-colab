@@ -1,0 +1,17 @@
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+
+# Entornos virtuales
+env/
+venv/
+ENV/
+.VENV/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del editor
+.vscode/
+*.swp
